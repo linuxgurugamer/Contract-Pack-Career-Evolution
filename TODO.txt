@@ -1,0 +1,21 @@
+Add following patch from @caerfinon:
+
+10-Spacestation.cfg for Kerbalism
+
+// Have Science Lab if StationScience NOT installed
+
+PARAMETER:NEEDS[!StationScience]
+{
+
+name = ScienceLab
+type = PartValidation
+title = Have at least one Science Lab on the station
+minCount = 1
+
+// Modification for Kerbalism
+// partModule = ModuleScienceLab
+
+partModule = Laboratory
+hideChildren = true
+
+}

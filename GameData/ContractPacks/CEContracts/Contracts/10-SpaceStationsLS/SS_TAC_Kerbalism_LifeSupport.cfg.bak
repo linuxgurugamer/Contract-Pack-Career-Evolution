@@ -1,6 +1,6 @@
 // *************************** Space Station Life Support Resupply
 
-CONTRACT_TYPE:NEEDS[Snacks]
+CONTRACT_TYPE:NEEDS[TACLifeSupport|Kerbalism]
 {
     
 	name = SSResupplyLS
@@ -43,14 +43,16 @@ CONTRACT_TYPE:NEEDS[Snacks]
 		requiredValue = true
 		hidden = true
 		uniquenessCheck = GROUP_ACTIVE
-		targetVessel1 = AllVessels().Where(v => v.VesselType() == Station && v.FreeDockingPorts()>0 && (v.ResourceCapacity(Snacks) / v.ResourceQuantity(Snacks))>0.11).SelectUnique()
-		title = Must have an open Docking Port and 10% or less of Life Support Resources
+		targetVessel1 = AllVessels().Where(v => v.VesselType() == Station && v.FreeDockingPorts()>0 && (v.ResourceCapacity(Food) / v.ResourceQuantity(Food))>0.11 || (v.ResourceCapacity(Water) / v.ResourceQuantity(Water))>0.11 || (v.ResourceCapacity(Oxygen) / v.ResourceQuantity(Oxygen))>0.11).SelectUnique()
+		title = Must have an open Docking Port and 10% or less of Life Support Supplies
 	}
 	DATA
 	{
 		type = int
-		suppliesSpace = Round(@/targetVessel1.ResourceCapacity(Snacks) - @/targetVessel1.ResourceQuantity(Snacks))
-		title = Get empty space for LS
+		foodSpace = Round(@/targetVessel1.ResourceCapacity(Food) - @/targetVessel1.ResourceQuantity(Food))
+		waterSpace = Round(@/targetVessel1.ResourceCapacity(Water) - @/targetVessel1.ResourceQuantity(Water))
+		oxygenSpace = Round(@/targetVessel1.ResourceCapacity(Oxygen) - @/targetVessel1.ResourceQuantity(Oxygen))
+		title = Get empty space for Life Support
 	}
 	DATA
 	{
@@ -96,7 +98,7 @@ CONTRACT_TYPE:NEEDS[Snacks]
 		{
 			name = AllResources
 			type = All
-			title = Have at least 1 Docking Port and bring at least @/suppliesSpace Snacks to refill your station.
+			title = Have at least 1 Docking Port and bring at least @/foodSpace Food, @/waterSpace Water, and @/oxygenSpace Oxygen to refill your station.
 			notes = This is the amount of Resources that would fill the station up
 			hideChildren = true
 			
@@ -113,9 +115,27 @@ CONTRACT_TYPE:NEEDS[Snacks]
 			{
 				name = LifeSupportResupply
 				type = HasResource
-				resource = Snacks
-				minQuantity = @/suppliesSpace
-				title = @/suppliesSpace Snacks
+				resource = Food
+				minQuantity = @/foodSpace
+				title = "@/foodSpace Food"
+				hideChildren = true
+			}
+			PARAMETER
+			{
+				name = LifeSupportResupply
+				type = HasResource
+				resource = Water
+				minQuantity = @/waterSpace
+				title = "@/waterSpace Water"
+				hideChildren = true
+			}
+			PARAMETER
+			{
+				name = LifeSupportResupply
+				type = HasResource
+				resource = Oxygen
+				minQuantity = @/oxygenSpace
+				title = "@/oxygenSpace Oxygen"
 				hideChildren = true
 			}
 		}

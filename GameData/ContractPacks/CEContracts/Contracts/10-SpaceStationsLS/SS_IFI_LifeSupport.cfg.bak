@@ -1,6 +1,6 @@
 // *************************** Space Station Life Support Resupply
 
-CONTRACT_TYPE:NEEDS[Snacks]
+CONTRACT_TYPE:NEEDS[IFILifeSupport]
 {
     
 	name = SSResupplyLS
@@ -43,13 +43,13 @@ CONTRACT_TYPE:NEEDS[Snacks]
 		requiredValue = true
 		hidden = true
 		uniquenessCheck = GROUP_ACTIVE
-		targetVessel1 = AllVessels().Where(v => v.VesselType() == Station && v.FreeDockingPorts()>0 && (v.ResourceCapacity(Snacks) / v.ResourceQuantity(Snacks))>0.11).SelectUnique()
+		targetVessel1 = AllVessels().Where(v => v.VesselType() == Station && v.FreeDockingPorts()>0 && (v.ResourceCapacity(LifeSupport) / v.ResourceQuantity(LifeSupport))>0.11).SelectUnique()
 		title = Must have an open Docking Port and 10% or less of Life Support Resources
 	}
 	DATA
 	{
 		type = int
-		suppliesSpace = Round(@/targetVessel1.ResourceCapacity(Snacks) - @/targetVessel1.ResourceQuantity(Snacks))
+		suppliesSpace = Round(@/targetVessel1.ResourceCapacity(LifeSupport) - @/targetVessel1.ResourceQuantity(LifeSupport))
 		title = Get empty space for LS
 	}
 	DATA
@@ -96,7 +96,7 @@ CONTRACT_TYPE:NEEDS[Snacks]
 		{
 			name = AllResources
 			type = All
-			title = Have at least 1 Docking Port and bring at least @/suppliesSpace Snacks to refill your station.
+			title = Have at least 1 Docking Port and bring at least @/suppliesSpace Life Support to refill your station.
 			notes = This is the amount of Resources that would fill the station up
 			hideChildren = true
 			
@@ -113,9 +113,9 @@ CONTRACT_TYPE:NEEDS[Snacks]
 			{
 				name = LifeSupportResupply
 				type = HasResource
-				resource = Snacks
+				resource = LifeSupport
 				minQuantity = @/suppliesSpace
-				title = @/suppliesSpace Snacks
+				title = "@/suppliesSpace Life Support"
 				hideChildren = true
 			}
 		}
