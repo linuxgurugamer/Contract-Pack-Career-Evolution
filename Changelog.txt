@@ -27,3 +27,8 @@ Changelog
         Merged in GPP files from @CessnaSkyhawk
         Updated GPP-specific files  with NEEDS[GPP]
         Updated nonGPP-specific files with NEEDS[!GPP]
+
+1.3.0
+    Thanks to forum user @EchoLima for these:
+        Added additional satellite contracts
+        Added additional Crewed Milestones contracts 
