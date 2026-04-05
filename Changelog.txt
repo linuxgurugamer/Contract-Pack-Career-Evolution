@@ -22,3 +22,8 @@ Changelog
             NOTE: The MPE patch is tested in an environment with stock + OPM + MPE (+ Kcalbeloh). 
             With other planet pack setups, YMMV. The patch hardcodes the names of the planets, 
             so in a non-stock home system, this patch probably won't work.
+
+1.2.0
+        Merged in GPP files from @CessnaSkyhawk
+        Updated GPP-specific files  with NEEDS[GPP]
+        Updated nonGPP-specific files with NEEDS[!GPP]
