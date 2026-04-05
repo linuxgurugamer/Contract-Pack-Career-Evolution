@@ -1,0 +1,24 @@
+Changelog
+
+1.0.0
+    initial release
+
+1.1.0
+    Adoption by Linuxgurugamer.  Merging in user fixes
+    Added .version file
+    Added Changelog
+    Added License file
+    Thanks to forum user @UnanimousCoward for these fixes:
+        Error in description of MoonReturn contract
+        Numerical error in three-month station contract
+        "Uncrewed Orbits" contract group has wrong display name
+        Incorrect contract group for 4 "landing" contracts
+        Multiple Dres contracts causing issues
+        Contracts requiring you to land on a wormhole when Kcalbeloh is installed
+        Errors in space station resupply contract
+    Thanks to forum user @UnanimousCoward for these fixes:
+        Fixes celestial bodies not being correctly targeted when MPE is installed, both stock and OPM
+        Adds contracts for all of MPE's celestial bodies    
+            NOTE: The MPE patch is tested in an environment with stock + OPM + MPE (+ Kcalbeloh). 
+            With other planet pack setups, YMMV. The patch hardcodes the names of the planets, 
+            so in a non-stock home system, this patch probably won't work.

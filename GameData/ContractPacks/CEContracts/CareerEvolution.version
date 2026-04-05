@@ -1,0 +1,30 @@
+{
+  "NAME": "CareerEvolution",
+  "URL": "https://raw.githubusercontent.com/linuxgurugamer/Contract-Pack-Career-Evolution/refs/heads/master/CareerEvolution.version",
+  "DOWNLOAD": "https://github.com/linuxgurugamer/Contract-Pack-Career-Evolution/releases",
+  "GITHUB": {
+    "USERNAME": "linuxgurugamer",
+    "REPOSITORY": "Contract-Pack-Career-Evolution"
+  },
+  "VERSION": {
+    "MAJOR": 1,
+    "MINOR": 1,
+    "PATCH": 0,
+    "BUILD": 0
+  },
+  "KSP_VERSION": {
+    "MAJOR": 1,
+    "MINOR": 12,
+    "PATCH": 5
+  },
+  "KSP_VERSION_MIN": {
+    "MAJOR": 1,
+    "MINOR": 12,
+    "PATCH": 0
+  },
+  "KSP_VERSION_MAX": {
+    "MAJOR": 1,
+    "MINOR": 12,
+    "PATCH": 99
+  }
+}

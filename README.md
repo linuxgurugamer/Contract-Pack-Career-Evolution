@@ -1,4 +1,8 @@
 # Career Evolution Contract Pack
+
+This is an update to the original Career Evolution Contract Pack, with some fixes added.  See the Changelog for details of the changes
+
+
 Intelligent Contract Progression for KSP
 
 The smart contract pack that fixes many of the issues in stock career mission progression.
