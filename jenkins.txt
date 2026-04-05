@@ -25,7 +25,7 @@
 # 0:1.3
 
 # 1:GAMEDIR, VERSIONFILE [, GITHUBREPO ]
-1:Contract-Pack-Career-Evolution,Contract-Pack-Career-Evolution.version
+1:ContractPacks/CEContracts,Contract-Pack-Career-Evolution.version,Contract-Pack-Career-Evolution
 
 # 3:SOURCEFILE, DESTDIR
 3:Contract-Pack-Career-Evolution.version,GameData/ContractPacks/CEContracts
