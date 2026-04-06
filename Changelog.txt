@@ -32,3 +32,6 @@ Changelog
     Thanks to forum user @EchoLima for these:
         Added additional satellite contracts
         Added additional Crewed Milestones contracts 
+
+1.3.0.1
+    Updated directory layout
