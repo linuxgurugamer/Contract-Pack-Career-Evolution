@@ -38,3 +38,6 @@ Changelog
 
 1.3.1
     Added support for Kerbalism regarding ModuleScienceLab vs Laboratory.  Originally identified by forum user @Caerfinon
+
+1.3.2
+    Fixed support for SCANsat due to name change in all scansat parts

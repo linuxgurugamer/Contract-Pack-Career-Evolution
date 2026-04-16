@@ -31,6 +31,7 @@
 3:Contract-Pack-Career-Evolution.version,GameData/ContractPacks/CEContracts
 3:License.md,GameData/ContractPacks/CEContracts
 3:README.md,GameData/ContractPacks/CEContracts
+3:Changelog.cfg,GameData/ContractPacks/CEContracts
 
 
 #
